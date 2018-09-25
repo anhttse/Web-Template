@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    
+<!-- Mirrored from luckyspin.aliansoftware.net/document/luckyspindoc.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 May 2018 02:05:08 GMT -->
+<head>
+        <title> Lucky Spin Documentation</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <link href="rainbow.css" rel="stylesheet"> 
+        <style>
+            body{   font-size: 14px;    color: #222;    background: #fff;font-family: 'Open Sans', sans-serif;padding-top: 30px; line-height: 1.5em;}
+            h1,h2,h3,h4,h5,h6{margin: 0px; }
+            h1{font-size: 2.6em;    line-height: 1;    margin-bottom: 0.5em;}
+            h2 { font-size: 1.9em;  margin-bottom: 0.75em;}
+            h3 {  font-size: 1.4em;    line-height: 1;    margin-bottom: 1em; }
+            h6{    font-size: 1.1em;    line-height: 1.25;    margin-bottom: 1.25em;}
+            p{margin: 0 0 15px;color: #222;     font-weight: normal;}
+            a{margin: 0px;    color: #009;   text-decoration: underline;}
+            a:focus, a:hover {  color: #000;}
+            ul, ol {   margin: 0 1.5em 15px 3.5em; padding: 0;}
+            .container { width: 790px; margin: 0 auto;}
+            .address{background-color: #fafcfc; padding: 20px 30px; border: 1px solid #eee; border-left: none; display: table-cell; vertical-align: middle; float: none;}
+            .address p,.thank_you p{color: #222;}
+            .thank_you{padding: 20px 30px; border: 1px solid #eee; display: table-cell; vertical-align: middle; float: none;}
+            .personal_info{display: table; width: 100%; margin: 0px auto 20px;}
+            .new_topic h4{padding: 0px 0px 20px; font-weight: bold; font-size: 1.4em;}
+            hr{border-color: #d0d0d0; margin: 0px 0 20px;}
+            .main_list_menu ul li>ul li{padding-top: 10px; padding-bottom: 0px; list-style-type: square;}
+            .alt {  color: #333;    font-family: "Warnock Pro", "Goudy Old Style","Palatino","Book Antiqua", Georgia, serif;    font-style: italic;    font-weight: normal;}
+            ol.alpha { list-style: upper-alpha;}
+            ul {  list-style-type: disc;}
+            .append-bottom { margin-bottom: 1.5em;}
+            .large {    font-size: 1.2em;    line-height: 2.5em;    margin-bottom: 1.25em;}
+            .clearfix:after, .container:after {    content: "\0020";    display: block;    height: 0;    clear: both;    visibility: hidden;    overflow: hidden;}
+            .col-sm-5.address { width: 250px;}
+            hr.space {    background: #fff;    color: #fff;}
+            code{font-family: "SFMono-Regular",Consolas,"Liberation Mono",Menlo,Courier,monospace;}
+            .theme_code{padding: 10px;white-space: pre-wrap;background-color: #f5f5f5;border: 1px solid #ccc;border: 1px solid rgba(0,0,0,.15);-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;}
+            .white_space {white-space: pre-wrap;}
+            .left_align{text-align: left;padding: 4px 8px;vertical-align: top;}
+            .imgadminoption { border: 1px solid; border-radius: 5px; }
+        </style>
+        
+    </head>
+    <body id="myPage" data-spy="scroll" data-target=".main_list_menu" data-offset="60">
+        <div class="container">
+            <h3 class="center alt" style="color:#d54a41; text-align: center;">“Lucky Spin” Documentation by “Alian Software” v1.0</h3>
+            <hr>
+            <h1 style="text-align: center; padding: 30px 0px 20px;">"Lucky Spin”</h1>
+            <div class="row personal_info">
+                <div class="col-sm-5 address">
+                    <strong>Created: January 2018</strong></br>
+                    <strong>By: Alian Software</strong></br>
+                    <strong>Email: <a href="mailto:support@aliansoftware.net"> support@aliansoftware.net </a></strong>
+                </div>
+                <div class="col-sm-7 thank_you">
+                    <p>Thank you for purchasing our code. If you have any questions that are beyond the scope of this help file, please feel free to email via our user page contact form <a href="https://codecanyon.net/user/aliansoftware" target="_blank">here</a>. Thanks so much!<p>
+                </div>
+            </div>
+            
+            <div class="table_content">
+                <h2 id="table_content" class="alt">Table of Contents</h2>
+                <nav class="main_list_menu">
+                    <ol class="alpha">                        
+                        <li><a href="#getting_started">Getting Started</a>
+                            <ul style="margin: 0px 1.5em 0px 1.5em;">
+                                <li><a href="#step1">Step 1</a></li>
+                                <li><a href="#step2">Step 2</a></li>
+                                <li><a href="#step3">Step 3</a></li>
+                                <li><a href="#step4">Step 4</a></li>
+                                <li><a href="#step5">Step 5</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#options">Options</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#json_properties">JSON Properties</a></li>
+                        <li><a href="#admin">Admin Options</a>
+                            <ul style="margin: 0px 1.5em 0px 1.5em;">
+                                <li><a href="#images">Wheel Center & Pin Image</a></li>
+                                <li><a href="#customize_wheel">Customize Wheel</a></li>
+                                <li><a href="#colors">Color</a></li>
+                                <li><a href="#segment_list">Segments</a></li>
+                                <li><a href="#enable_disable">Enable/Disable Discount</a></li>
+                                <li><a href="#trigger_placement">Trigger & Placement</a></li>
+                            </ul>
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+
+            <div class="table_content">
+                <h2 id="getting_started" class="alt">Getting Started - <a class="back_to_top_arrow" href="javascript:void(0)">top</a> </h2> 
+                <h3 id="step1"> Step 1: - <a class="back_to_top_arrow" href="javascript:void(0)">top</a> </h3>
+                <p id="toc" > In the page head add the below css files: </p>
+                <nav class="main_list_menu">
+                    <ol class="alpha">
+                        <li> <pre class="white_space" data-trimmed="true"><code data-language="css"><link rel="stylesheet" href="../../yourdomain.com/css/luckySpin.min.html">​</code></pre></li>
+                        <li> <pre class="white_space" data-trimmed="true"><code data-language="css"><link rel="stylesheet" href="../../yourdomain.com/css/bootstrap.html">​</code></pre></li>
+                    </ol>
+                </nav>
+                <h3 id="step2"> Step 2: - <a class="back_to_top_arrow" href="javascript:void(0)">top</a> </h3>
+                <p id="toc" class=""> In the page footer add the below js files: </p>
+                <nav class="main_list_menu">
+                    <ol class="alpha">
+                        <li> <pre class="white_space" data-trimmed="true"><code data-language="css"><script src="../../ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script></code></pre></li>
+                        <li> <pre class="white_space" data-trimmed="true"><code data-language="css"><script src="../../maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script></code></pre></li>
+                        <li> <pre class="white_space" data-trimmed="true"><code data-language="css"><script src="../../cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script></code></pre></li>
+                        <li> <pre class="white_space" data-trimmed="true"><code data-language="css"><script src="http://www.bookmark.com#5aaaf328e2407/"></script></code></pre></li>
+                        <li> <pre class="white_space" data-trimmed="true"><code data-language="css"><script src="../../yourdomain.com/js/script.js"></script></code></pre></li>
+                    </ol>
+                </nav>
+
+                <h3 id="step3"> Step 3: - <a class="back_to_top_arrow" href="javascript:void(0)">top</a> </h3>
+                <p id="toc" class=""> Place the canvas in the container where you want to display: </p>
+                <pre class="white_space" data-trimmed="true"><code data-language="css"><div class="spin_wheel_section">
+    <div class="spin_pin"></div> <!-- This tag will display pin image on top of wheel  -->
+    <div width="438" height="582" class="the_wheel" align="center" valign="center"> <!-- This tag will display background image besides the spin wheel  -->
+        <canvas id="canvas" width="434" height="434">
+            <p style="color: white" align="center">Sorry, your browser doesn't support canvas. Please try again.</p>
+        </canvas>
+    </div> 
+</div></code></pre>
+
+                <h3 id="step4"> Step 4: - <a class="back_to_top_arrow" href="javascript:void(0)">top</a> </h3>
+                <p id="toc" class=""> Add spin now button to handle spin wheel: </p>
+                <pre data-trimmed="true"><code data-language="css"><a id="spin_button" href="javascript:void(0);">Spin Now!</a></code></pre>
+
+                <h3 id="step5"> Step 5: - <a class="back_to_top_arrow" href="javascript:void(0)">top</a> </h3>
+                <p id="toc" class=""> In JavaScript file or inline code, initalize the wheel. Below code defined in the script.js file. All the option values are declares static value for demo purposes.</p>
+                <pre class="white_space" data-trimmed="true"><code data-language="css">theWheel = new Luckywheel({
+    'numSegments': 3, // Specify number of segments.
+    'outerRadius': 212, // Set radius to so wheel fits the background.
+    'innerRadius': 60, // Set inner radius to make wheel hollow.
+    'textFontSize': 20, // Set font size accordingly.
+    'textMargin': 0, // Take out default margin.
+    'segments': [
+                  { fillStyle: "#FFC252", text: "20%", winresult: "You got 20% Discount",IsCouponCode:"true",CouponCode:"LUCKY20"},
+                  { fillStyle: "#24CFFF", text: "15%", winresult: "You got 15% Discount",IsCouponCode: "true", CouponCode: "LUCKY15" },
+                  { fillStyle: "gold", text: "No Discount", winresult: "Sorry Better Luck Next Time", IsCouponCode: "false", CouponCode: "" }
+                ],
+    'wheelTextColor': "white", // Set font size accordingly.
+    'WheelStrokeColor': "white",
+    'WheelStrokeWidth': "3",
+    'animation': // Define spin to stop animation.
+            {
+                'type': 'spinToStop',
+                'duration': 5,
+                'spins': 8,
+                'callbackFinished': alertWinResult
+            },
+});</code></pre>
+                
+                
+
+                <p id="toc" class=""> In JavaScript file or inline code, initalize the wheel. Below code defined in the script.js file. All the option values are received dynamically from JSON file.</p>
+                
+                <pre class="white_space" data-trimmed="true"><code data-language="css">//load your JSON from settings.json file
+function loadJSON(callback) {
+    var xobj = new XMLHttpRequest();
+    xobj.overrideMimeType("application/json");
+    xobj.open('GET', 'settings.json', true); 
+    xobj.onreadystatechange = function () {
+        if (xobj.readyState == 4 && xobj.status == "200") {
+            // use of callback (xobj.responseText)
+        }
+    };
+    xobj.send(null);
+}</code></pre>
+                
+                <pre class="white_space" data-trimmed="true"><code data-language="css"> 
+var arrSegmentsList = [];
+var theWheel = [];
+function init() {
+    loadJSON(function (response) {
+            // Parse JSON string into object 
+            actual_JSON = JSON.parse(response);
+            var segList = actual_JSON.data[0].segmentsList;
+            cookidy = actual_JSON.data[0].cookiedays;
+            var segno = 1;
+            for (i = 0; i < segList.length; i++) {
+                segmentsForSpin.push(segList[i].txtDisplayText);
+                var v = parseInt(segList[i].hdnGravityPerc);
+                var rang = v / 10;
+                var cntrec = Math.round(rang);
+                for (var p = 0; p < cntrec; p++) {
+                    arrsp.push(segno);
+                }
+                arrSegmentsList.push({
+                    fillStyle: segList[i].txtBackgroundColor,
+                    text: segList[i].txtDisplayText,
+                    winResult: segList[i].txtResultText,
+                    isCouponExist: segList[i].IsCouponCode,
+                    CouponCode: segList[i].CouponCode,
+                });
+                segno = segno + 1;
+            }
+            strarr = arrsp.join('|');
+        });
+}
+init();</code></pre>
+                
+                <pre class="white_space" data-trimmed="true"><code data-language="css">var font_size = actual_JSON.data[0].WheelTextSize;
+var gameover_text = actual_JSON.data[0].GameOverText;
+var wheel_text_color = actual_JSON.data[0].WheelTextColor;
+var wheel_stroke_color = actual_JSON.data[0].WheelStrokeColor;
+var wheel_stroke_width = actual_JSON.data[0].WheelStrokeWidth;
+var wheel_inner_radious = actual_JSON.data[0].InnerRadious;
+var wheel_outer_radious = actual_JSON.data[0].OuterRadious;
+
+theWheel = new Luckywheel({
+    'numSegments': arrSegmentsList.length, // Specify number of segments.
+    'outerRadius': parseInt(wheel_outer_radious), // Set outer radius 
+    'innerRadius': parseInt(wheel_inner_radious), // Set inner radius 
+    'textFontSize': font_size, // Set font size accordingly.
+    'textMargin': 0, // Take out default margin.
+    'segments': arrSegmentsList, // Object of segment list
+    'wheelTextColor': wheel_text_color, // Set text color accordingly.
+    'WheelStrokeColor': wheel_stroke_color, // Stroke color between each segment
+    'WheelStrokeWidth': wheel_stroke_width,
+    'animation': // Define spin to stop animation.
+            {
+                'type': 'spinToStop',
+                'duration': 5,
+                'spins': 8,
+                'callbackFinished': alertWinResult,
+                'callbackBefore': animbefore,
+                'callbackAfter': animafter,
+                'callbackSound': playSpinSound, // Function to call when the tick sound is to be triggered.
+            },
+});</code></pre>
+
+<p id="toc" class=""> This callback function will call after the spin wheel complete the rotation.  </p>
+<pre class="white_space" data-trimmed="true"><code data-language="css">function alertWinResult(selectedSegment) {
+    
+    jQuery(".spin_pin").rotate(0);
+    $("#spinWinResult").text(gameover_text);
+    $(".power_controls").hide();
+
+    var response = "";
+    if (selectedSegment.isCouponExist == "true")
+    {
+        response += "<p>" + selectedSegment.winResult + "</p>";
+        response += "<p> Your Coupon Code is " + selectedSegment.CouponCode + "</p>";
+    }
+    else
+    {
+        response += "<p>" + selectedSegment.winResult + "</p>";
+    }
+
+    $("#displayprice").html(response);
+    $('#spin').modal('show');
+    $(".reset_btn").show();
+}</code></pre>
+
+<p id="toc" class=""> This callback function will call when spin wheel will rotate and it will play sound </p>
+ <pre class="white_space" data-trimmed="true"><code data-language="css">var audio = new Audio('spinsound.mp3');  // Create audio object and load spinsound.mp3 file.
+function playSpinSound() {
+    audio.pause();
+    audio.currentTime = 0;
+
+    // Play the sound.
+    audio.play();
+}</code></pre>
+
+            <h2 id="options" class="alt">Options - <a class="back_to_top_arrow" href="javascript:void(0)">top</a> </h2>
+            
+            <div>
+                <table border="1" cellspacing="0" cellpadding="0" style="width:100%;">
+                    <thead>
+                        <tr>
+                            <th class="left_align"> Option Name </th>
+                            <th class="left_align"> Type </th>
+                            <th class="left_align"> Default Value </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="left_align"> numSegments </td>
+                            <td class="left_align"> int </td>
+                            <td class="left_align"> 5 </td>
+                        </tr>
+                        <tr>
+                            <td class="left_align"> outerRadius </td>
+                            <td class="left_align"> int </td>
+                            <td class="left_align"> 212 </td>
+                        </tr>
+                        <tr>
+                            <td class="left_align"> innerRadius </td>
+                            <td class="left_align"> int </td>
+                            <td class="left_align"> 60 </td>
+                        </tr>
+                        <tr>
+                            <td class="left_align"> textFontSize </td>
+                            <td class="left_align"> int </td>
+                            <td class="left_align"> 20 </td>
+                        </tr>
+                        <tr>
+                            <td class="left_align"> textMargin </td>
+                            <td class="left_align"> int </td>
+                            <td class="left_align"> 0 </td>
+                        </tr>
+                        <tr>
+                            <td class="left_align"> segments </td>
+                            <td class="left_align"> array </td>
+                            <td class="left_align"> [{ fillStyle: "#FFC252", text: "20%", winresult: "You got 20% Discount",IsCouponCode:"true",CouponCode:"LUCKY20"}] </td>
+                        </tr>
+                        <tr>
+                            <td class="left_align"> wheelTextColor </td>
+                            <td class="left_align"> string </td>
+                            <td class="left_align"> white </td>
+                        </tr>
+                        <tr>
+                            <td class="left_align"> WheelStrokeColor </td>
+                            <td class="left_align"> string </td>
+                            <td class="left_align"> white </td>
+                        </tr>
+                        <tr>
+                            <td class="left_align"> WheelStrokeWidth </td>
+                            <td class="left_align"> string </td>
+                            <td class="left_align"> 3 </td>
+                        </tr>
+                        <tr>
+                            <td class="left_align"> animation </td>
+                            <td class="left_align"> object </td>
+                            <td class="left_align"> type : 'spinToStop', 'duration': 5, 'spins': 8,, 'callbackFinished': alertWinResult,'callbackSound': playSpinSound </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <br>
+
+            </div>
+
+            <div class="table_content">
+                <h2 id="features" class="alt">Features - <a class="back_to_top_arrow" href="javascript:void(0)">top</a> </h2>
+                <nav class="main_list_menu">
+                    <ol class="alpha">
+                        <li>Spin destinations can be set to ensure a specific outcome</li>
+                        <li>Supports infinite random spins</li>
+                        <li>Smooth intuitive spin/throw physics</li>
+                        <li>Customizable colors with unique or alternating pattern</li>
+                        <li>Customizable size, text, image and style of the graphics</li>
+                        <li> Responsive and scalable </li>
+                        <li> Edit the behavior and look using JSON or PHP </li>
+                        <li> Customizable number of wheel segments </li>
+                        <li> Change text as the prize on each segment </li>
+                        <li> Set gravity of each segment </li>
+
+                        <li> Level Of Spin </li>
+                        <li> Supports desktop and mobile </li>
+
+                    </ol>
+                </nav>
+            </div>
+
+            <div class="table_content">
+                <h2 id="json_properties" class="alt">JSON Properties - <a class="back_to_top_arrow" href="javascript:void(0)">top</a> </h2>
+                <p>An example of a JSON file can be found </p>
+                <p><code style="padding: 0.2em 0.4em;margin: 0;font-size: 14px;background-color: rgba(27,31,35,0.12);border-radius: 3px;">segmentsList</code> - an array of objects. The segments list used to add options of Segment Name, Segment background color, Result of segment, gravity of win, set coupon code for each segment if you need. Below are the different object of this array: </p>
+                <ul>
+                    <li><p><code style="padding: 0.2em 0.4em;margin: 0;font-size: 14px;background-color: rgba(27,31,35,0.12);border-radius: 3px;">txtDisplayText</code> - String - This property is used to display text of segment name in Spin wheel. </p></li>
+                    <li><p><code style="padding: 0.2em 0.4em;margin: 0;font-size: 14px;background-color: rgba(27,31,35,0.12);border-radius: 3px;">txtResultText</code> - String - display result text of each segment </p></li>
+                    <li><p><code style="padding: 0.2em 0.4em;margin: 0;font-size: 14px;background-color: rgba(27,31,35,0.12);border-radius: 3px;">txtBackgroundColor</code> - String - display background color in spin wheel for each segment </p></li>
+                    <li><p><code style="padding: 0.2em 0.4em;margin: 0;font-size: 14px;background-color: rgba(27,31,35,0.12);border-radius: 3px;">ddlGravity</code> - String - display Gravity of win out of 100 </p></li>
+                    <li><p><code style="padding: 0.2em 0.4em;margin: 0;font-size: 14px;background-color: rgba(27,31,35,0.12);border-radius: 3px;">hdnGravityPerc</code> - String - display percentage of Gravity of win out of 100% </p></li>
+                    <li><p><code style="padding: 0.2em 0.4em;margin: 0;font-size: 14px;background-color: rgba(27,31,35,0.12);border-radius: 3px;">IsCouponCode</code> - String - Used to check the coupon code added or not. </p></li>
+                    <li><p><code style="padding: 0.2em 0.4em;margin: 0;font-size: 14px;background-color: rgba(27,31,35,0.12);border-radius: 3px;">CouponCode</code> - String - coupon code of each segment if added. </p></li>
+                </ul>
+                <br>
+                <p><code style="padding: 0.2em 0.4em;margin: 0;font-size: 14px;background-color: rgba(27,31,35,0.12);border-radius: 3px;">OuterRadius</code> - String - Option to set outer radius of each segment </p>
+                <p><code style="padding: 0.2em 0.4em;margin: 0;font-size: 14px;background-color: rgba(27,31,35,0.12);border-radius: 3px;">InnerRadius</code> - String - Option to set inner radius of each segment </p>
+                <p><code style="padding: 0.2em 0.4em;margin: 0;font-size: 14px;background-color: rgba(27,31,35,0.12);border-radius: 3px;">WheelStrokeColor</code> - String - Option to set color for wheel stroke </p>
+                <p><code style="padding: 0.2em 0.4em;margin: 0;font-size: 14px;background-color: rgba(27,31,35,0.12);border-radius: 3px;">WheelStrokeWidth</code> - String - displayed width of wheel stroke </p>    
+                <p><code style="padding: 0.2em 0.4em;margin: 0;font-size: 14px;background-color: rgba(27,31,35,0.12);border-radius: 3px;">WheelTextColor</code> - String - displayed text color of segment name in wheel </p>    
+                <p><code style="padding: 0.2em 0.4em;margin: 0;font-size: 14px;background-color: rgba(27,31,35,0.12);border-radius: 3px;">WheelTextSize</code> - String - displayed text size of segment name in wheel </p>    
+                <p><code style="padding: 0.2em 0.4em;margin: 0;font-size: 14px;background-color: rgba(27,31,35,0.12);border-radius: 3px;">GameOverText</code> - String - displayed game over text after spinned wheel </p>    
+                <p><code style="padding: 0.2em 0.4em;margin: 0;font-size: 14px;background-color: rgba(27,31,35,0.12);border-radius: 3px;">InvalidSpinText</code> - String - invalid text of any issue when spin wheel </p>    
+                <p><code style="padding: 0.2em 0.4em;margin: 0;font-size: 14px;background-color: rgba(27,31,35,0.12);border-radius: 3px;">IntroText</code> - String - introduction text to display on page </p>
+                <p><code style="padding: 0.2em 0.4em;margin: 0;font-size: 14px;background-color: rgba(27,31,35,0.12);border-radius: 3px;">backgroundOption</code> - Array of object - The background option to set with text or image. Below are the option of background options: </p>
+                <ul>
+                    <li><p><code style="padding: 0.2em 0.4em;margin: 0;font-size: 14px;background-color: rgba(27,31,35,0.12);border-radius: 3px;">type</code> - String - type property is used for image or text field </p></li>
+                    <li><p><code style="padding: 0.2em 0.4em;margin: 0;font-size: 14px;background-color: rgba(27,31,35,0.12);border-radius: 3px;">value</code> - String - displayed the value for text or image selected </p></li>
+                </ul>
+                <p><code style="padding: 0.2em 0.4em;margin: 0;font-size: 14px;background-color: rgba(27,31,35,0.12);border-radius: 3px;">centerWheelImage</code> - String - displayed the image of center image in spin wheel </p>
+                <p><code style="padding: 0.2em 0.4em;margin: 0;font-size: 14px;background-color: rgba(27,31,35,0.12);border-radius: 3px;">WheelPinImage</code> - String - displayed the top pin image in spin wheel </p>
+                <p><code style="padding: 0.2em 0.4em;margin: 0;font-size: 14px;background-color: rgba(27,31,35,0.12);border-radius: 3px;">enablediscountbar</code> - String - discount bar is enabled or not </p>
+                <p><code style="padding: 0.2em 0.4em;margin: 0;font-size: 14px;background-color: rgba(27,31,35,0.12);border-radius: 3px;">countdowntime</code> - String - displayed count down time in minutes </p>
+                <p><code style="padding: 0.2em 0.4em;margin: 0;font-size: 14px;background-color: rgba(27,31,35,0.12);border-radius: 3px;">position</code> - String - display where the position to display discount bar </p>
+                <p><code style="padding: 0.2em 0.4em;margin: 0;font-size: 14px;background-color: rgba(27,31,35,0.12);border-radius: 3px;">showdesktop</code> - String - option used to display on/off spin wheel in desktop or not </p>
+                <p><code style="padding: 0.2em 0.4em;margin: 0;font-size: 14px;background-color: rgba(27,31,35,0.12);border-radius: 3px;">desktopintent</code> - String - option used to display on/off When mouse leaves browser's viewport </p>
+                <p><code style="padding: 0.2em 0.4em;margin: 0;font-size: 14px;background-color: rgba(27,31,35,0.12);border-radius: 3px;">DesktopIntervaltext</code> - String - display interval time in seconds for desktop </p>
+                <p><code style="padding: 0.2em 0.4em;margin: 0;font-size: 14px;background-color: rgba(27,31,35,0.12);border-radius: 3px;">showmobile</code> - String - option used to display on/off spin wheel in mobile or not </p>
+                <p><code style="padding: 0.2em 0.4em;margin: 0;font-size: 14px;background-color: rgba(27,31,35,0.12);border-radius: 3px;">mobileintent</code> - String - displayed on/off value to display intent for mobile viewport </p>
+                <p><code style="padding: 0.2em 0.4em;margin: 0;font-size: 14px;background-color: rgba(27,31,35,0.12);border-radius: 3px;">mobileinterval</code> - String - displayed on/off value in mobile interval </p>
+                <p><code style="padding: 0.2em 0.4em;margin: 0;font-size: 14px;background-color: rgba(27,31,35,0.12);border-radius: 3px;">MobileIntervaltext</code> - String - interval time in seconds for mobile interval text </p>
+                <p><code style="padding: 0.2em 0.4em;margin: 0;font-size: 14px;background-color: rgba(27,31,35,0.12);border-radius: 3px;">cookiedays</code> - String - Cookie days to display spin wheel after days entered </p>
+
+            </div>
+            
+            <div class="table_content">
+                <h2 id="images" class="alt">Wheel Center & Pin Image - <a class="back_to_top_arrow" href="javascript:void(0)">top</a> </h2>
+                <image class="imgadminoption" src="images/wheelimage.png" />
+                
+                <h2 id="customize_wheel" class="alt">Customize Wheel - <a class="back_to_top_arrow" href="javascript:void(0)">top</a> </h2>
+                <image class="imgadminoption" src="images/customize_wheel.png" />
+                
+                <h2 id="colors" class="alt">Color Options - <a class="back_to_top_arrow" href="javascript:void(0)">top</a> </h2>
+                <image class="imgadminoption" src="images/customize_colors.png" />
+                
+                <h2 id="segment_list" class="alt"> Segments - <a class="back_to_top_arrow" href="javascript:void(0)">top</a> </h2>
+                <image class="imgadminoption" src="images/customize_segments.png" />
+                
+                <h2 id="enable_disable" class="alt"> Enable/Disable Discount - <a class="back_to_top_arrow" href="javascript:void(0)">top</a> </h2>
+                <image class="imgadminoption" src="images/customize_enable_disable.png" />
+                
+                <h2 id="trigger_placement" class="alt"> Trigger & Placement - <a class="back_to_top_arrow" href="javascript:void(0)">top</a> </h2>
+                <image class="imgadminoption" src="images/customize_trigger.png" />
+                
+            </div>
+            
+            <p>Once again, thank you so much for purchasing this app. As we said at the beginning, we'd be glad to help you if you have any questions relating to this app. No guarantees, but we'll do our best to assist.</p>
+            <p class="append-bottom alt large"><strong>Alian Software</strong></p>
+            <p><a href="#table_content">Go To Table of Contents</a></p>
+        </div>
+        <script src="../../ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="../../maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="rainbow-custom.min.js" type="text/javascript"></script>
+        <script>
+            $(document).ready(function () {
+                $(".main_list_menu a").on('click', function (event) {
+                    if (this.hash !== "") {
+                        event.preventDefault();
+                        var hash = this.hash;
+                        $('html, body').animate({
+                            scrollTop: $(hash).offset().top
+                        }, 900, function () {
+                            window.location.hash = hash;
+                        });
+                    }
+                });
+                $("a.back_to_top_arrow").on('click', function (event) {
+                    event.preventDefault();
+                    $('body,html').animate({
+                        scrollTop: 0
+                    }, 900);
+                });
+            });
+            
+        </script>
+    </body>
+
+<!-- Mirrored from luckyspin.aliansoftware.net/document/luckyspindoc.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 May 2018 02:05:17 GMT -->
+</html>

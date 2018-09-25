@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lucky Spin</title>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/TweenMax.min.js"></script>
+    <script src="./js/jQuery.luckywheel.min.js"></script>
+    <script src="./js/jscolor.js"></script>
+    <!-- <script src="./js/script.js"></script> -->
+    <script src="./js/customize.js"></script>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/luckySpin.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="spinner">
+            <div class="spin_wheel_section">
+                <div class="spin_pin"></div> <!-- This tag will display pin image on top of wheel  -->
+                <div width="438" height="582" class="the_wheel" align="center" valign="center"> <!-- This tag will display background image besides the spin wheel  -->
+                    <canvas id="canvas" width="434" height="434">
+                        <p style="color: white" align="center">Sorry, your browser doesn't support canvas. Please try again.</p>
+                    </canvas>
+                </div> 
+            </div>
+        </div>
+        <a id="spin_button" href="javascript:void(0);">Spin Now!</a>
+    </div>
+</body>
+</html>

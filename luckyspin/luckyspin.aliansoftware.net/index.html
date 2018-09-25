@@ -1,0 +1,417 @@
+<html>
+    
+<!-- Mirrored from luckyspin.aliansoftware.net/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 May 2018 02:02:29 GMT -->
+<head>
+        <title> Alian Software-Spin Win </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/luckySpin.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="body-content">
+            <div class="coupon" id="h4">
+                <div class="general">
+                    <div class="bgMaindiv">
+                        <div class="logo">
+                            <img src="images/logo.png" alt="logo">
+                            <a target="_blank" href="https://aliansoftware.com/">Develop by Aliansoftware</a>
+                        </div>
+                        <div id="main">
+                            <div class="spin_wheel_section">
+                                <div class="spin_pin"></div>
+                                <div width="438" height="582" class="the_wheel" align="center" valign="center">
+                                    <div class="wheel_inner"> <canvas id="canvas" width="434" height="434">
+                                            <p style="color: white" align="center">Sorry, your browser doesn't support canvas. Please try again.</p>
+                                        </canvas>
+                                    </div>
+                                </div> 
+                            </div>
+                            <div class="spin_speed_select_section">
+                                <div class="container">
+                                    <div class="main_sec">
+                                        <h2 id="spinWinResult" class="title"> </h2>
+                                        <input type="button" value="Reset" class="reset_btn" style="display:none;">
+                                    </div>
+                                    <div class="power_controls" style="display:none;">
+                                        <div class="main_sec">
+                                            <h2 class="title"></h2> 
+                                        </div>
+                                        <div class="power">
+                                            <div class="spin_speed">
+                                                <h4>Select spinning wheel speed</h4>
+                                                <div class="spin_type">
+                                                    <a href="javascript:void(0);" id="lowspeed" class="lowspeed" onClick="selectedSpeed(1);">Low</a>
+                                                    <a href="javascript:void(0);" id="mediumspeed" class="mediumspeed" onClick="selectedSpeed(2);">Medium</a>
+                                                    <a href="javascript:void(0);" id="highspeed" class="highspeed" onClick="selectedSpeed(3);">High</a>
+                                                </div>
+                                            </div>
+                                            <div class="spin_now_btn">
+                                                <a id="spin_button" href="javascript:void(0);">Spin Now!</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--backend code start -->
+            <div class="container body-content">
+                <h2 class="title_backend"> Backend Setting: </h2>
+                <div class="empty_div" id="h1"></div>
+                <form autocomplete="off" enctype="multipart/form-data" id="settingform">
+                    <div class="form-horizontal wheel_app" style="display: block;">
+                        <div class="branding">
+                            <div class="main_sec">
+                                <h2 class="title"> LUCKY SPIN </h2>
+                                <p class="page_p">Spin it, Win it ! Be the Lucky One</p>
+                            </div>
+                            <div class="general">
+                                <div class="form-group">
+                                    <div class="col-xs-6">
+                                        <div class="form-group">
+                                            <div class="col-sm-6">
+                                                <h2 class="title">Wheel Center Image</h2>
+                                                <p class="page_p">438 x 582px image, max 500 kb</p>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <input type="text" class="form-control text-box single-line" id="txtWheelCenterImage" placeholder="Enter wheel center image url" name="txtWheelCenterImage" value="212">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <div class="form-group">
+                                            <div class="col-sm-6">
+                                                <h2 class="title">Wheel Pin Image</h2>
+                                                <p class="page_p">50 x 50px image, max 50 kb</p>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <input type="text" class="form-control text-box single-line" id="txtWheelPinImage" placeholder="Enter wheel pin image url" name="txtWheelPinImage" value="212">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr class="page_hr">
+                                <div class="field_text">
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <h2 class="title">Customize Wheel</h2>
+                                        </div>
+                                        <div class="col-sm-9">
+                                            <table class="table" id="tabletext" name="tabletext">
+                                                <thead>
+                                                    <tr>
+                                                        <td>Text name</td>
+                                                        <td>Value</td>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>  
+                                                    <tr>
+                                                        <td>
+                                                            Wheel Outer Radius:
+                                                        </td>
+                                                        <td>                                                
+                                                            <input type="text" class="form-control col-sm-12 text-box single-line" id="txtOuterRadius" placeholder="Enter wheel outer radius" name="txtOuterRadius">
+                                                            <span class="frmError" id="spn_OuterRadius" name="spn_OuterRadius"> This field is required. </span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            Wheel Inner Radius:
+                                                        </td>
+                                                        <td>                                                
+                                                            <input type="text" class="form-control col-sm-12 text-box single-line" id="txtInnerRadius" placeholder="Enter wheel outer radius" name="txtInnerRadius">
+                                                            <span class="frmError" id="spn_InnerRadius" name="spn_InnerRadius"> This field is required. </span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            Wheel Stroke Width:
+                                                        </td>
+                                                        <td>                                                
+                                                            <input type="text" class="form-control col-sm-12 text-box single-line" id="txtWheelStrokeWidth" placeholder="Enter Wheel Stroke Width" name="txtWheelStrokeWidth">
+                                                            <span class="frmError" id="spn_WheelStrokeWidth" name="spn_WheelStrokeWidth"> This field is required. </span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            Wheel Text Size :
+                                                        </td>
+                                                        <td>                                                
+                                                            <input type="text" class="form-control  col-sm-12 text-box single-line" id="txtwheelTextSize" placeholder="Enter Wheel Text Size" name="txtwheelTextSize">
+                                                            <span class="frmError" id="spn_wheelTextSize" name="spn_wheelTextSize"> This field is required. </span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            Game Over Text :
+                                                        </td>
+                                                        <td>                                                
+                                                            <input type="text" class="form-control col-sm-12 text-box single-line" id="txtgameOverText" placeholder="Enter Game Over Text" name="txtgameOverText">
+                                                            <span class="frmError" id="spn_gameOverText" name="spn_gameOverText"> This field is required. </span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            Intro Text :
+                                                        </td>
+                                                        <td>                                                
+                                                            <input type="text" class="form-control col-sm-12 text-box single-line" id="txtintroText" placeholder="Enter Intro Text" name="txtintroText">
+                                                            <span class="frmError" id="spn_introText" name="spn_introText"> This field is required. </span>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr class="page_hr">
+                                <div class="preview_wheel row">
+                                    <div class="col-sm-3">
+                                        <h2 class="title">Color</h2>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <div class="form-group">
+                                            <div class="col-xs-8">
+                                                <div class="color_box">
+                                                    <label class="form-label inline_label">Wheel Stroke Color:</label>
+                                                    <div class="color_input">
+                                                        <input type="text" class="form-control jscolor" id="txtWheelStrokeColor" placeholder="Enter Wheel Stroke Color" name="txtWheelStrokeColor" autocomplete="off">
+                                                    </div>
+                                                </div>
+                                                <div class="color_box">
+                                                    <label class="form-label inline_label">Wheel Text Color :</label>
+                                                    <div class="color_input">
+                                                        <input type="text" class="form-control jscolor" id="txtwheelTextColor" placeholder="Enter Wheel Text OffsetY" name="txtwheelTextColor" value="#FFFFFF" autocomplete="off" style="background-image: none; background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);">
+                                                    </div>
+                                                </div>
+                                                <div class="color_box">
+                                                    <div class="">
+                                                        <label class="form-label inline_label">Background Color/Image :</label>
+                                                        <div class="color_input">
+                                                            <select id="ddlBackgroundOption" name="ddlBackgroundOption" class="input_box">
+                                                                <option value="text">Text</option>
+                                                                <option value="image" selected="selected">Image</option> 
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="color_picker" id="dvBackgroundColor" style="display:none">                                                
+                                                        <div class="image_text">
+                                                            <input type="text" class="form-control jscolor" style="width: 110px; margin-top: 11px; background-image: none; background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);" id="txtBackgroundColor" placeholder="Select Background Color" name="txtBackgroundColor" value="" autocomplete="off">
+                                                        </div>
+                                                    </div>
+                                                    <div class="image_selector" id="dvBackgroundImage" style="display:block">
+                                                        <div class="image_text">
+                                                            <br>
+                                                            <input type="text" class="form-control text-box single-line" id="txtBackgroungImage" placeholder="Enter background image url" name="txtBackgroungImage" value="212">
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="blank_space"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr class="page_hr">
+                                <div class="form-group coupon" id="h3">
+                                    <div class="segments_section">
+                                        <div class="col-sm-3">
+                                            <h2 class="title"> Segments </h2>
+                                            <p class="page_p"> From here you can add Coupons/create Segments which will display on the Lucky Spin.You have to provide Segment Name, Win Result (text will display on the segment user got), Coupon Code and Gravity. </p>
+                                            <p class="page_p"> Gravity setting example: If you have a segment with 100 gravity and all other slices to 0 gravity, then 100 gravity slice will win every time. </p>
+                                        </div>
+                                        <div class="col-sm-9">
+                                            <table id="tblurl" class="comp_body table">
+                                                <thead>
+                                                    <tr>
+                                                        <td>Segment Name</td>
+                                                        <td>Segment Background Color </td>
+                                                        <td>Win Result</td>
+                                                        <td>Coupon Code</td>
+                                                        <td>Gravity</td>
+                                                        <td></td>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="tblsegments">
+                                                </tbody>
+                                            </table>
+                                            <input type="text" id="txtresult" style="display:none;" name="txtresult">
+                                            <div>
+                                                <input type="button" id="btnAdd" value="Add More" onclick="return AddOption();" class="btn_add page_btn">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <hr class="page_hr ">
+                                    </div>
+                                    <div class="enable_timer">
+                                        <div class="col-sm-3">
+                                            <h2 class="title">Enable / Disable Discount</h2>
+                                        </div>
+                                        <div class="col-sm-9">
+                                            <label class="switch">
+                                                <input type="checkbox" id="enablediscountbar" name="enablediscountbar"> 
+                                                <span class="slider round"></span> Enable <b>discount coupon code bar</b> and countdown
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="timer">
+                                        <div class="col-sm-3">
+                                        </div>
+                                        <div class="col-sm-9">
+                                            <div class="disable-me" style="display:none"></div>
+                                            <div class="input_left">
+                                                <label>Countdown time</label>
+                                                <input class="input_box text-box single-line" data-val="true" data-val-number="The field CountDownTime must be a number." data-val-required="The CountDownTime field is required." id="countdowntime" name="countdowntime" type="number">
+                                                <span>min.</span>
+                                            </div>
+                                            <div class="input_left">
+                                                <label>Position</label>
+                                                <select id="position" name="position" class="col-md-4 input_box">
+                                                    <option value="screen_top">Screen top</option>
+                                                    <option value="screen_bottom">Screen bottom</option>
+                                                    <option value="page_top">Page top</option>
+                                                    <option value="page_bottom">Page bottom</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <hr class="page_hr ">
+                                    </div>
+                                    <div class="trigger" id="h2">
+                                        <div class="col-sm-3">
+                                            <h2 class="title">Triggers &amp; Placement</h2>
+                                            <p class="page_p">You can select where you want to display Lucky Spin on Desktop/Mobile.</p>
+                                        </div>
+                                        <div class=" col-sm-9">
+                                            <div class="tab_txt">
+                                                <h4>Pullout tab trigger:</h4>
+                                                <p class="page_p"> A small Icon which will display on the left side, it opens when any user clicks on it.</p>
+                                            </div>
+                                            <div class="tab_txt">
+                                                <h4>Placement:</h4>
+                                                <p class="page_p">Default placement setting is site wide. Spin Win Optin will display on all areas of your site. If you do not want this, please select a specific URL.</p>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-xs-6 show_desk">
+                                                    <label class="switch">
+                                                        <input type="checkbox" id="showdesktop" name="showdesktop">
+                                                        <span class="slider round"></span>Show on desktop computers
+                                                    </label>
+                                                    <div class="desk_comp">
+                                                        <div id="dvdesktop" class="">
+                                                            <label class="switch">
+                                                                <input type="checkbox" id="desktopintent" name="desktopintent">
+                                                                <span class="slider round"></span>On user's leave intent<span class="page_p">When mouse leaves browser's viewport</span>
+                                                            </label>
+                                                            <div class="time_set">
+                                                                <label class="switch chk_btn">
+                                                                    <input type="checkbox" id="desktopinterval" name="desktopinterval">
+                                                                    <span class="slider round"></span>
+                                                                </label>
+                                                                <div class="after">
+                                                                    <label for="desktopinterval">After</label>  <input class="form-control col-md-2 input_box text-box single-line" data-val="true" data-val-number="The field DesktopInterval must be a number." data-val-required="The DesktopInterval field is required." id="DesktopIntervaltext" name="DesktopIntervaltext" type="number"><span>Seconds</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-6 show_desk">
+                                                    <label class="switch">
+                                                        <input type="checkbox" id="showmobile" name="showmobile">
+                                                        <span class="slider round"></span>Show on tablets and mobiles
+                                                    </label>
+                                                    <div class="desk_comp">
+                                                        <div id="dvmobile" class="">
+                                                            <label class="switch">
+                                                                <input type="checkbox" id="mobileintent" name="mobileintent">
+                                                                <span class="slider round"></span>On user's leave intent<span class="page_p">When users suddenly scrolls upwards</span>
+                                                            </label>
+                                                            <div class="time_set">
+                                                                <label class="switch chk_btn">
+                                                                    <input type="checkbox" id="mobileinterval" name="mobileinterval">
+                                                                    <span class="slider round"></span>
+                                                                </label>
+                                                                <div class="after">
+                                                                    <label for="mobileinterval">After</label> <input class="form-control col-md-2 input_box text-box single-line" data-val="true" data-val-number="The field MobileInterval must be a number." data-val-required="The MobileInterval field is required." id="MobileIntervaltext" name="MobileIntervaltext" type="number"> <span>Seconds</span></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr class="page_hr">
+                                            <div class="form-group reset_cookie">
+                                                <div class="col-sm-12">
+                                                    <p class="page_p">
+                                                        Do not show SpinWinOptin to the same visitor again for that many days (30 days by default):
+                                                    </p>
+                                                    <div class="cookie_input">
+                                                        <input class="col-md-4 input_box text-box single-line" data-val="true" data-val-number="The field CookieDays must be a number." data-val-required="The CookieDays field is required." id="cookiedays" name="cookiedays" type="number"><span>Days</span>
+                                                    </div>
+                                                    <p class="page_p">
+                                                        start a new SpinWinOptin campaign! Show it again to everyone no matter how many days have passed.
+                                                    </p>
+                                                    <input type="button" value="Reset cookies for all users" class="page_btn resetcookie">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <input type="hidden" id="hdnSegmentCount" name="hdnSegmentCount" value="">
+                                <input type="button" value="Save" id="btnSaveSetting" name="btnSaveSetting" onclick="formSaveData()" class="page_btn" style="float: right;">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!--backend end-->
+            <div class="footer_section">
+                <div class="container">
+                    <p>If you have any suggestions, please get in touch with an email: <a href="mailto:support@aliansoftware.net">support@aliansoftware.net</a></p>
+                    <p>If you like Spin Win, it would mean the world to us if you could leave a review. For more support, please open a help ticket</p>
+                </div>
+            </div>
+        </div>
+        <div id="spin" class="modal fade spin_result" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <div class="modal-body">
+                        <p id="displayprice"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fix_at_bottom">
+            <a href="document/luckyspindoc.html" target="_blank">
+                <img src="images/Dociment-Image.jpg" alt="image">
+            </a>
+        </div>
+        <script src="../ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="../maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/jQuery.luckywheel.min.js"></script>
+        <script src="../cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+        <script src="js/script.js" type="text/javascript"></script>
+        <script src="js/jscolor.js" type="text/javascript"></script>
+        <script src="js/setting.js" type="text/javascript"></script>
+        <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='chat.js';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+    </body>
+
+<!-- Mirrored from luckyspin.aliansoftware.net/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 May 2018 02:02:45 GMT -->
+</html>

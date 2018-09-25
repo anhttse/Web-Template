@@ -1,0 +1,142 @@
+{
+    "data": [
+        {
+            "segmentsList": [
+                {
+                    "txtDisplayText": "20%",
+                    "txtResultText": "You got 20% discount.",
+                    "txtBackgroundColor": "#FFC252",
+                    "ddlGravity": "30",
+                    "hdnGravityPerc": "15",
+                    "IsCouponCode": "true",
+                    "CouponCode": "4444"
+                },
+                {
+                    "txtDisplayText": "5%",
+                    "txtResultText": "You got 5% discount.",
+                    "txtBackgroundColor": "#FF8CDB",
+                    "ddlGravity": "30",
+                    "hdnGravityPerc": "15",
+                    "IsCouponCode": "true",
+                    "CouponCode": "456123"
+                },
+                {
+                    "txtDisplayText": "15%",
+                    "txtResultText": "You got 15% discount.",
+                    "txtBackgroundColor": "#24CFFF",
+                    "ddlGravity": "10",
+                    "hdnGravityPerc": "5",
+                    "IsCouponCode": "true",
+                    "CouponCode": "4000"
+                },
+                {
+                    "txtDisplayText": "25%",
+                    "txtResultText": "You got 25% discount.",
+                    "txtBackgroundColor": "#5CFFA0",
+                    "ddlGravity": "20",
+                    "hdnGravityPerc": "10",
+                    "IsCouponCode": "true",
+                    "CouponCode": "645123"
+                },
+                {
+                    "txtDisplayText": "20%",
+                    "txtResultText": "You got 20% discount.",
+                    "txtBackgroundColor": "#7A6EFF",
+                    "ddlGravity": "10",
+                    "hdnGravityPerc": "5",
+                    "IsCouponCode": "true",
+                    "CouponCode": "12345"
+                },
+                {
+                    "txtDisplayText": "40%",
+                    "txtResultText": "You got 40% discount.",
+                    "txtBackgroundColor": "#FFC457",
+                    "ddlGravity": "10",
+                    "hdnGravityPerc": "5",
+                    "IsCouponCode": "true",
+                    "CouponCode": "555666"
+                },
+                {
+                    "txtDisplayText": "Loss",
+                    "txtResultText": "You Loss the game.",
+                    "txtBackgroundColor": "#D09EFF",
+                    "ddlGravity": "80",
+                    "hdnGravityPerc": "40",
+                    "IsCouponCode": "false",
+                    "CouponCode": ""
+                },
+                {
+                    "txtDisplayText": "70%",
+                    "txtResultText": "You got 70% discount.",
+                    "txtBackgroundColor": "#ABF2FF",
+                    "ddlGravity": "0",
+                    "hdnGravityPerc": "0",
+                    "IsCouponCode": "true",
+                    "CouponCode": "465456"
+                },
+                {
+                    "txtDisplayText": "55%",
+                    "txtResultText": "You got 55% discount.",
+                    "txtBackgroundColor": "#9582FF",
+                    "ddlGravity": "0",
+                    "hdnGravityPerc": "0",
+                    "IsCouponCode": "true",
+                    "CouponCode": "9859895"
+                },
+                {
+                    "txtDisplayText": "Jackpot",
+                    "txtResultText": "You Win Jackpot.",
+                    "txtBackgroundColor": "#FFBA70",
+                    "ddlGravity": "0",
+                    "hdnGravityPerc": "0",
+                    "IsCouponCode": "true",
+                    "CouponCode": "111111"
+                },
+                {
+                    "txtDisplayText": "95%",
+                    "txtResultText": "You got 95% discount.",
+                    "txtBackgroundColor": "#46C97D",
+                    "ddlGravity": "0",
+                    "hdnGravityPerc": "0",
+                    "IsCouponCode": "true",
+                    "CouponCode": "959595"
+                },
+                {
+                    "txtDisplayText": "50%",
+                    "txtResultText": "You got 50% discount.",
+                    "txtBackgroundColor": "#87D9FF",
+                    "ddlGravity": "10",
+                    "hdnGravityPerc": "5",
+                    "IsCouponCode": "true",
+                    "CouponCode": "786512"
+                }
+            ],
+            "OuterRadius": "212",
+            "InnerRadius": "60",
+            "WheelStrokeColor": "#FFFFFF",
+            "WheelStrokeWidth": "3",
+            "WheelTextColor": "#FFFFFF",
+            "WheelTextSize": "20",
+            "GameOverText": "THANK YOU FOR PLAYING SPIN2WIN WHEEL. COME AND PLAY AGAIN SOON!",
+            "IntroText": "YOU HAVE TO CLICK SPIN BUTTON TO WIN IT!",
+            "backgroundOption": {
+                "type": "image",
+                "value": "background_12ec1d70a7c72c01f48a1d4416074129.jpg"
+            },
+            "centerWheelImage": "wheelcenter_b8aba481386aabee47bb588032606137.png",
+            "WheelPinImage": "wheelcenter_42b535480fd11de938ec249bf2b60678.png",
+            "enablediscountbar": "on",
+            "countdowntime": "15",
+            "position": "screen_bottom",
+            "showdesktop": "on",
+            "desktopintent": "on",
+            "desktopinterval": "on",
+            "DesktopIntervaltext": "17",
+            "showmobile": "off",
+            "mobileintent": "on",
+            "mobileinterval": "on",
+            "MobileIntervaltext": "19",
+            "cookiedays": "5"
+        }
+    ]
+}
